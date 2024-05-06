@@ -2,7 +2,7 @@
 
 ![GEOPointer](img/geopointer.png)
 
-Neste teste serão avaliados seus conhecimentos em Javascript, HTML, CSS, banco de dados, API REST,arquitetura e organização da aplicação final.
+Neste teste serão avaliados seus conhecimentos em Javascript, HTML, CSS, banco de dados, API REST, arquitetura e organização da aplicação final.
 
 ## O Desafio
 
