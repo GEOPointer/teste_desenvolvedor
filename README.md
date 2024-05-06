@@ -20,7 +20,7 @@ Esses requisitos são obrigatórios e devem ser desenvolvidos para a entrega do 
 
 ## O que é permitido
 
-* Vue, React e Angular.
+* Vue, React, Next e Angular.
 
 * Typescript.
 
@@ -71,6 +71,9 @@ Para realizar a entrega do teste você deve:
 * Criar uma branch com o nome de `teste/[NOME]`.
   * `[NOME]`: Seu nome.
   * Exemplos: `teste/fulano-da-silva`; `teste/beltrano-primeiro-gomes`.
+
+* Caso o front-end e o back-end estejam em repositorios diferentes, identificar no nome da branch.
+  * Exemplo: `teste/fulano-da-silva-frontend`; `teste/fulano-da-silva-backend`.
   
 * Faça um commit da sua branch com a implementação do teste.
   
