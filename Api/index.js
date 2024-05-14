@@ -6,8 +6,7 @@ import swaggerUi  from 'swagger-ui-express';
 import swaggerFile from'swagger-autogen';
 import bodyParser from 'body-parser';
 import swaggerJSDoc from 'swagger-jsdoc';
-
-
+// import swaggerOutput from './swagger-json.json';
 
 app.use(express.json());
 app.use(cors());
@@ -20,7 +19,7 @@ var swaggerDefinition = {
         description:"testando desc"
     },
     components:{
-        // schemas: import from '';
+        // schemas: swaggerOutput
     }
 }
 

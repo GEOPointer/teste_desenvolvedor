@@ -1,7 +1,9 @@
 import React,{useEffect, useRef} from "react";
-import{FormContainer,InputArea,Input,Label,Button} from "../styles/FormStyles";
+import{FormContainer,InputArea,Input,Label} from "../styles/FormStyles";
 import axios from "axios";
 import { toast } from "react-toastify";
+
+import {Button,Form,Row,Col}  from 'react-bootstrap';
 
 const From = ({getEquipments,onEdit,setOnEdit}) =>{
     const ref = useRef();
@@ -55,29 +57,38 @@ const From = ({getEquipments,onEdit,setOnEdit}) =>{
 
 
     return(
-        <FormContainer ref={ref} onSubmit={handleSubmit}>
-            <InputArea>
-                <Label>Nome</Label>
-                <Input name="name"></Input>
-            </InputArea>
-            <InputArea>
-                <Label>Tag</Label>
-                <Input name="tag"></Input>
-            </InputArea>
-            <InputArea>
-                <Label>Data da ultima manutenção</Label>
-                <Input name="maintenence_date" type="date"></Input>
-            </InputArea>
-            <InputArea>
-                <Label>Latitude</Label>
-                <Input name="latitude"></Input>
-            </InputArea>
-            <InputArea>
-                <Label>Longitude</Label>
-                <Input name="longitude"></Input>  
-            </InputArea>
+        <Form className="mb-5" ref={ref} onSubmit={handleSubmit}>
+            <Form.Group>
+                <Row>
+                    <Col>
+                        <Form.Label>Nome</Form.Label>
+                        <Form.Control name="name"></Form.Control>
+                    </Col>
+                    <Col>
+                    <Form.Label>Tag</Form.Label>
+                <Form.Control name="tag"></Form.Control>
+                    </Col>
+                </Row>
+
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Row>
+                    <Col>
+                        <Form.Label>Data da ultima manutenção</Form.Label>
+                        <Form.Control name="maintenence_date" type="date"></Form.Control>
+                    </Col>
+                    <Col>
+                        <Form.Label>Latitude</Form.Label>
+                        <Form.Control name="latitude"></Form.Control>
+                    </Col>
+                    <Col>
+                        <Form.Label>Longitude</Form.Label>
+                        <Form.Control name="longitude"></Form.Control>  
+                    </Col>
+                </Row>
+            </Form.Group>
             <Button type="submit">Salvar</Button>
-        </FormContainer>        
+        </Form>        
     )
 }
 

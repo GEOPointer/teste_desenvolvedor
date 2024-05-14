@@ -2,13 +2,34 @@ import { query } from "express";
 import { database } from "../Infrastructure/database.js";
 // import{GetEquipments,Create,Update,Delete} from "../Repositories/EquipmentRepository.js";
 
+/**
+ * @swagger
+ * path: /
+ * operations:
+ *   -  httpMethod: GET
+ *      summary: Lista todos os equipamentos
+ *      notes: Lista todos os equipamentos cadastrados
+ *      responseClass: User
+ *      nickname: login
+ *      consumes: 
+ *        - text/html
+ *      parameters:
+ *        - name: username
+ *          description: Your username
+ *          paramType: query
+ *          required: true
+ *          dataType: string
+ *        - name: password
+ *          description: Your password
+ *          paramType: query
+ *          required: true
+ *          dataType: string
+ */
 export const GetAll = async (_, res) => {
-
     const q = "Select * FROM equipment";
     database.query(q,(error,data) => {
         if(error) return res.json(error);
         return res.status(200).json(data);
-        
     })
 }
 

@@ -1,4 +1,4 @@
-import {GlobalStyle,Container} from "./styles/global";
+import {GlobalStyle} from "./styles/global";
 import styled from "styled-components";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,6 +6,8 @@ import Form from "./components/Form.js";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Grid from "./components/Grid.js";
+import Header from "./components/Layout/Header.js";
+import {Container,Row} from 'react-bootstrap';
 
 
 
@@ -31,10 +33,17 @@ function App() {
 
   return (
     <>
-      <Container>
-        <Title>Equipamentos</Title>
-        <Form  onEdit={onEdit} setOnEdit={setOnEdit}  getEquipments={getEquipments} />
-        <Grid equipments={equipments} setEquipments={setEquipments} setOnEdit={setOnEdit} />
+    <Header />
+      <Container className="py-3">
+        <Row>
+          <Title>Equipamentos</Title>
+        </Row>
+        <Row>
+          <Form  onEdit={onEdit} setOnEdit={setOnEdit}  getEquipments={getEquipments} />
+        </Row>
+        <Row>
+          <Grid equipments={equipments} setEquipments={setEquipments} setOnEdit={setOnEdit} />
+        </Row>
       </Container>
       <ToastContainer autoClose={3000} position={'bottom-left'} />
       <GlobalStyle />

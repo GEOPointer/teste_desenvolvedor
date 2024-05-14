@@ -1,0 +1,25 @@
+{
+    "Equipamentos":{
+      "type": "object",
+      "properties:":{
+        "id":{
+          "type":"integer"
+        },
+        "name":{
+          "type":"string"
+        },
+        "tag":{
+          "type":"string"
+        },
+        "maintenence_date":{
+          "type": "date"
+        },
+        "latitude":{
+          "type":"string"
+        },
+        "longitude":{
+          "type":"string"
+        }
+      }
+    }
+  }

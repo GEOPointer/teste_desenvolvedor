@@ -1,5 +1,6 @@
 import React from "react";
-import{Table,Thead,Tbody,Tr,Th,Td} from "../styles/GridStyles"
+// import{Table,Thead,Tbody,Tr,Th,Td} from "../styles/GridStyles"
+import Table from 'react-bootstrap/Table';
 import axios from "axios";
 import {FaEdit,FaTrash} from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -22,31 +23,31 @@ const Grid = ({equipments,setEquipments,setOnEdit}) =>{
     }
 
     return(
-        <Table>
-            <Thead>
-                <Tr>
-                    <Th>Tag</Th>
-                    <Th>Nome</Th>
-                    <Th>Ultima Manutenção</Th>
-                    <Th>Latitude</Th>
-                    <Th>Longitude</Th>
-                </Tr>
-            </Thead>
-            <Tbody>
+        <Table striped>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Nome</th>
+                    <th>Ultima Manutenção</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                </tr>
+            </thead>
+            <tbody>
                 {equipments.map((item, i) => (
-                    <Tr key={i}>
-                        <Td>{item.id}</Td>
-                        <Td>{item.tag}</Td>
-                        <Td>{item.name}</Td>
-                        <Td>{item.maintenence_date}</Td>
-                        <Td>{item.latitude}</Td>
-                        <Td>{item.longitude}</Td>
-                        <Td> <FaEdit onClick={() => handleEdit(item)} /></Td>
-                        <Td> <FaTrash onClick={() => handleDelete(item.id)} /> </Td>
-                    </Tr>
+                    <tr key={i}>
+                        <td>{item.id}</td>
+                        <td>{item.tag}</td>
+                        <td>{item.name}</td>
+                        <td>{item.maintenence_date}</td>
+                        <td>{item.latitude}</td>
+                        <td>{item.longitude}</td>
+                        <td> <FaEdit onClick={() => handleEdit(item)} /></td>
+                        <td> <FaTrash onClick={() => handleDelete(item.id)} /> </td>
+                    </tr>
                 ))}
 
-            </Tbody>
+            </tbody>
         </Table>
     );
 }

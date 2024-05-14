@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "resolveJsonModules": true,
   "scripts": {
     "start": "nodemon index.js",
     "swagger-autogen": "node swagger.js"
