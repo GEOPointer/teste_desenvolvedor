@@ -8,6 +8,7 @@ import axios from "axios";
 import Grid from "./components/Grid.js";
 import Header from "./components/Layout/Header.js";
 import {Container,Row} from 'react-bootstrap';
+import Footer from "./components/Layout/Footer.js";
 
 
 
@@ -46,6 +47,7 @@ function App() {
         </Row>
       </Container>
       <ToastContainer autoClose={3000} position={'bottom-left'} />
+      <Footer />
       <GlobalStyle />
     </>
   );

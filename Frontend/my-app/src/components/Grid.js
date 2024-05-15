@@ -23,7 +23,7 @@ const Grid = ({equipments,setEquipments,setOnEdit}) =>{
     }
 
     return(
-        <Table striped>
+        <Table>
             <thead>
                 <tr>
                     <th>Tag</th>
@@ -31,19 +31,21 @@ const Grid = ({equipments,setEquipments,setOnEdit}) =>{
                     <th>Ultima Manutenção</th>
                     <th>Latitude</th>
                     <th>Longitude</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
                 {equipments.map((item, i) => (
                     <tr key={i}>
-                        <td>{item.id}</td>
                         <td>{item.tag}</td>
                         <td>{item.name}</td>
                         <td>{item.maintenence_date}</td>
                         <td>{item.latitude}</td>
                         <td>{item.longitude}</td>
-                        <td> <FaEdit onClick={() => handleEdit(item)} /></td>
-                        <td> <FaTrash onClick={() => handleDelete(item.id)} /> </td>
+                        <td> 
+                            <FaEdit className="me-3" onClick={() => handleEdit(item)} />
+                            <FaTrash onClick={() => handleDelete(item.id)} />
+                        </td>
                     </tr>
                 ))}
 

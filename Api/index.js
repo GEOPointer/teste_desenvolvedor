@@ -14,9 +14,10 @@ app.use(cors());
 
 var swaggerDefinition = {
     info:{
-        title:"testeando",
+        title:"Documentação do Just a Crud",
         version:"1.0.0",
-        description:"testando desc"
+        description:"Isso é uma api de um CRUD construido com NodeJs utilizando Express para o seu servidor e tem apenas as funcionalidades "
+        +"de um CRUD"
     },
     components:{
         // schemas: swaggerOutput

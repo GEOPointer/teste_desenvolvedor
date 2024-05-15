@@ -9,4 +9,13 @@ body{
     height:100vh;
     background-color:#f2f2f2;
 }
+.custom-footer{
+    background-color:#11415F;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+.footer-logo{
+    max-width:300px;
+}
 `;
