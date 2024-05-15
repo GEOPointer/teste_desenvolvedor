@@ -46,7 +46,7 @@ function App() {
           <Grid equipments={equipments} setEquipments={setEquipments} setOnEdit={setOnEdit} />
         </Row>
       </Container>
-      <ToastContainer autoClose={3000} position={'bottom-left'} />
+      <ToastContainer autoClose={3000} position={'top-right'} />
       <Footer />
       <GlobalStyle />
     </>

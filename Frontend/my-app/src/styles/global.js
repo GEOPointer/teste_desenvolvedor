@@ -17,6 +17,7 @@ body{
 }
 .footer-logo{
     max-width:300px;
+    filter: grayscale(108%);
 }
 .disabled{
     background: #c3c3c3 !important;
