@@ -1,12 +1,10 @@
 import express from 'express';
 import cors from "cors";
 import router from './routes/EquipmentRoute.js';
-const app = express();
 import swaggerUi  from 'swagger-ui-express';
-import swaggerFile from'swagger-autogen';
-import bodyParser from 'body-parser';
 import swaggerJSDoc from 'swagger-jsdoc';
 // import swaggerOutput from './swagger-json.json';
+const app = express();
 
 app.use(express.json());
 app.use(cors());

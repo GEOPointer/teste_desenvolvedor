@@ -1,4 +1,4 @@
-import {createGlobalStyle,styled} from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 *{
     margin: 0;
@@ -17,5 +17,9 @@ body{
 }
 .footer-logo{
     max-width:300px;
+}
+.disabled{
+    background: #c3c3c3 !important;
+    cursor: not-allowed !important;
 }
 `;

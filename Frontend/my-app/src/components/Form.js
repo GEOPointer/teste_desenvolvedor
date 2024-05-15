@@ -1,7 +1,7 @@
 import React,{useEffect, useRef} from "react";
-import{FormContainer,InputArea,Input,Label} from "../styles/FormStyles";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { v4 as uuidv4 } from 'uuid';
 
 import {Button,Form,Row,Col}  from 'react-bootstrap';
 
@@ -42,7 +42,7 @@ const From = ({getEquipments,onEdit,setOnEdit}) =>{
         }else{
             await axios
                 .post("http://localhost:8000",{
-                    tag: equipment.tag.value,
+                    tag: uuidv4(),
                     name: equipment.name.value,
                     maintenence_date: equipment.maintenence_date.value,
                     latitude: equipment.latitude.value,
@@ -52,13 +52,19 @@ const From = ({getEquipments,onEdit,setOnEdit}) =>{
                 .then(({ data }) => toast.success(data))
                 .catch(({ data }) => toast.error(data));
         }
+
         getEquipments();
+        equipment.tag.value = "";
+        equipment.name.value = "";
+        equipment.maintenence_date.value = "";
+        equipment.latitude.value = "";
+        equipment.longitude.value = "";
     }
 
 
     return(
         <Form className="mb-5" ref={ref} onSubmit={handleSubmit}>
-            <Form.Group>
+            <Form.Group className="mb-3">
                 <Row>
                     <Col>
                         <Form.Label>Nome</Form.Label>
@@ -66,7 +72,7 @@ const From = ({getEquipments,onEdit,setOnEdit}) =>{
                     </Col>
                     <Col>
                     <Form.Label>Tag</Form.Label>
-                <Form.Control name="tag"></Form.Control>
+                <Form.Control name="tag" className="disabled"  readOnly ></Form.Control >
                     </Col>
                 </Row>
 

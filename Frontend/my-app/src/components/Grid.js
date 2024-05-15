@@ -1,13 +1,24 @@
 import React from "react";
-// import{Table,Thead,Tbody,Tr,Th,Td} from "../styles/GridStyles"
 import Table from 'react-bootstrap/Table';
 import axios from "axios";
 import {FaEdit,FaTrash} from "react-icons/fa";
 import { toast } from "react-toastify";
 
 const Grid = ({equipments,setEquipments,setOnEdit}) =>{
+
+    function transformDate(dateString){
+        const dbDate = new Date(dateString);
+        const day = dbDate.getDate();
+        const month = dbDate.getMonth();
+        const year = dbDate.getFullYear();
+
+        const formattedDay = day < 10 ? '0' + day : day;
+        const formattedMonth = month < 10 ? '0' + month : month;
+
+        return `${formattedDay}/${formattedMonth}/${year}`;
+    }
+
     const handleDelete = async (id) =>{
-        console.log("andleDelete",id);
         await axios
             .delete("http://localhost:8000/"+ id)
             .then(({data}) => {
@@ -39,7 +50,7 @@ const Grid = ({equipments,setEquipments,setOnEdit}) =>{
                     <tr key={i}>
                         <td>{item.tag}</td>
                         <td>{item.name}</td>
-                        <td>{item.maintenence_date}</td>
+                        <td>{transformDate(item.maintenence_date)}</td>
                         <td>{item.latitude}</td>
                         <td>{item.longitude}</td>
                         <td> 
