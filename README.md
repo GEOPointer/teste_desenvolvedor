@@ -1,52 +1,34 @@
-# Teste Desenvolvedor
+# Teste Desenvolvedor Júnior
 
 ![GEOPointer](img/geopointer.png)
-
-Neste teste serão avaliados seus conhecimentos em Javascript, HTML, CSS, banco de dados, API REST, arquitetura e organização da aplicação final.
 
 ## O Desafio
 
 Você é o desenvolvedor fullstack de uma empresa de engenharia que irá realizar o mapeamento dos equipamentos presentes em uma industria. No mapeamento dos equipamentos, será coletado os dados da tag de identificação do equipamento, a data da ultima manuntenção, a posição geográfica do equipamento e o tipo do equipamento.
 
-Seu objetivo é, de posse desses dados, desenvolver uma aplicação backend que exponha esses dados através de uma API e uma interface que exiba essas informações para os gestores da industria.
+Seu objetivo é, de posse desses dados, desenvolver uma API e uma interface que exiba essas informações para os gestores da industria.
 
 ## Requisitos
 
-Esses requisitos são obrigatórios e devem ser desenvolvidos para a entrega do teste.
+Esses requisitos são obrigatórios e devem ser desenvolvidos para a entrega do teste:
 
-* **API de CRUD**: Você deve desenvolver uma API que exponha os métodos de Criar, Excluir, Editar e Ler para a entidade equipamento.
+* **API de CRUD**: Você deve desenvolver uma API com os métodos de Criar, Ler, Editar e Excluir para a entidade equipamento.
 
-* **Tabela de visualização do dado**: Visualizar uma tabela com todas os equipamentos
+* **Tabela de visualização do dado**: Visualizar uma tabela com todos os equipamentos e os seus respectivos dados.
 
-## O que é permitido
-
-* Vue, React, Next e Angular.
+## Tecnologias preferíveis:
 
 * Typescript.
 
-* Bibliotecas de componentes (Element-ui, Vuetify, Bootstrap, etc.)
+* React ou Next.
 
 * Bibliotecas e APIs de Mapas (Leaflet, Openlayers, Google Maps API, etc).
 
-* Template engines (Pug, Ejs, etc).
-
-* Gerenciamento de estado (Vuex, Redux, etc).
-
 * Frameworks CSS (Tailwind, Bulma, Bootstrap, Materialize, etc).
 
-* Pré-processadores CSS (SCSS, SASS, LESS, etc).
-
-* C# (.NET, .NET Core, etc).
-
-* Express.js.
+* C# (.NET, .NET Core, etc) Express.js.
 
 * Mapeamento objeto-relacional (ORM).
-
-* Qualquer tecnologia complementar as citadas anteriormente são permitidas desde que seu uso seja justificável.
-
-## O que não é permitido
-
-* Utilizar componentes ou códigos de terceiros que implementem algum dos requisitos.
 
 ## Extras
 
